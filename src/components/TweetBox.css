@@ -1,0 +1,76 @@
+.tweetBox{
+    padding: 0px 10px 10px 0px;
+    border-bottom:8px solid var(--twitter-background) ;
+}
+
+.tweetBox > form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tweetBox__input{
+    display: flex;
+    padding: 20px;
+}
+
+.tweetBox__input > input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+.tweetBox__input > input:active{
+    outline: none;
+}
+.tweetBox__input > input:focus{
+    outline: none;
+}
+
+/* background-color: var(--twitter-color)  !important;
+border: none  !important;
+color: white !important;
+font-weight: 900 !important;
+text-transform: inherit !important;
+border-radius: 30px !important;
+height: 50px !important;
+margin-top: 20px !important; */
+
+.tweetbox__Button{
+background-color: var(--twitter-color) !important;
+border: none !important;
+color: white !important;
+font-weight: 900 !important;
+width: 85px !important;
+margin-left: auto !important;
+border-radius: 25px !important;
+}
+
+.tweetBox__image{
+    border: none;
+padding: 20px;
+}
+
+.tweetBox__image:active{
+    outline: none;
+}
+.tweetBox__image:focus{
+    outline: none;
+}
+/* .tweetBox__input{
+    display: flex;
+}
+
+
+.tweetBox__input > .MuiAvatar-root {
+    flex: 0.1;
+
+    margin: 20px;
+}
+
+
+.tweetBox__input > input{
+    flex: 0.9;
+    border: none;
+} */
