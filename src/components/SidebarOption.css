@@ -1,0 +1,30 @@
+.sidebarOption{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+/* Hover effcet on each Sidebar tile */
+.sidebarOption:hover{
+    background-color: #e8f5fe;
+    border-radius: 25px;
+    color: var(--twitter-color);
+    transition: color 120ms ease-out;
+}
+
+.sidebarOption > .MuiSvgIcon-root{
+    padding: 20px;
+}
+
+.sidebarOption > h2{
+    font-size: 20px;
+    margin-right: 20px;
+    font-weight: 800;
+}
+
+
+.sidebarOption--active{
+    color: var(--twitter-color);
+}
