@@ -1,6 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { Avatar } from '@material-ui/core';
-import { VerifiedUser } from '@material-ui/icons';
+import {
+  ChatBubbleOutlineRounded,
+  FavoriteBorderOutlined,
+  PublishOutlined,
+  Repeat,
+  VerifiedUser,
+} from '@material-ui/icons';
 import React from 'react';
 import './Post.css';
 // 2:04
@@ -20,14 +26,25 @@ function Post(props) {
           <div className="post__headerText">
             <h3>
               Divesh Keswani
-              <span>
+              <span className="post__headerSpecial">
                 <VerifiedUser className="post__badge" />
+                @IronManFan
               </span>
             </h3>
           </div>
           <div className="post_headerDescription">
-            <p>Here is our first twitter clone</p>
+            <p>Here is our first twitter post</p>
           </div>
+        </div>
+        <img
+          src="https://media.giphy.com/media/3o7bu9QJvnFxxFXaes/giphy.gif"
+          alt="gif"
+        />
+        <div className="post__footer">
+          <ChatBubbleOutlineRounded fontSize="small" />
+          <Repeat fontSize="small" />
+          <FavoriteBorderOutlined fontSize="small" />
+          <PublishOutlined fontSize="small" />
         </div>
       </div>
     </div>

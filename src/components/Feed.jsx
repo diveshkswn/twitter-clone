@@ -13,12 +13,14 @@ function Feed() {
 
       {/* TweetBox */}
       <TweetBox />
+      {/* Posts */}
+
       <Post />
-      {/* Post */}
-      {/* Post */}
-      {/* Post */}
-      {/* Post */}
-      {/* Post */}
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+
     </div>
   );
 }
