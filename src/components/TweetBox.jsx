@@ -2,7 +2,6 @@ import { Avatar, Button } from '@material-ui/core';
 import React from 'react';
 import './TweetBox.css';
 
-// 1:38
 function TweetBox() {
   return (
     <div className="tweetBox">

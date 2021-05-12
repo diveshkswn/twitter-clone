@@ -9,7 +9,7 @@ import {
 } from '@material-ui/icons';
 import React from 'react';
 import './Post.css';
-// 2:04
+
 function Post(props) {
   const {
     displayName, userName, verified, text, image, avatar,
@@ -19,25 +19,25 @@ function Post(props) {
 
     <div className="post">
       <div className="post_avatar">
-        <Avatar src="https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Divesh Keswani
+              {`${displayName} `}
               <span className="post__headerSpecial">
-                <VerifiedUser className="post__badge" />
-                @IronManFan
+                {verified && <VerifiedUser className="post__badge" />}
+                {` ${userName}`}
               </span>
             </h3>
           </div>
           <div className="post_headerDescription">
-            <p>Here is our first twitter post</p>
+            <p>{text}</p>
           </div>
         </div>
         <img
-          src="https://media.giphy.com/media/3o7bu9QJvnFxxFXaes/giphy.gif"
+          src={image}
           alt="gif"
         />
         <div className="post__footer">
