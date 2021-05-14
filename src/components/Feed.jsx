@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import './Feed.css';
+import FlipMove from 'react-flip-move';
 import Post from './Post';
 import TweetBox from './TweetBox';
 import db from '../firebase';
@@ -21,17 +22,23 @@ function Feed() {
     });
   }, []);
 
-  function populatePosts(eachPost) {
-    return (
-      <Post
-        displayName={eachPost.displayName}
-        userName={eachPost.userName}
-        verified={eachPost.verified}
-        text={eachPost.text}
-        image={eachPost.image}
-        avatar={eachPost.image}
-      />
-    );
+  function populatePosts(eachPost, index) {
+    if (eachPost.text) {
+      return (
+
+        <Post
+          key={index}
+          displayName={eachPost.displayName}
+          userName={eachPost.userName}
+          verified={eachPost.verified}
+          text={eachPost.text}
+          image={eachPost.image}
+          avatar={eachPost.avatar}
+        />
+      );
+    }
+
+    return null;
   }
 
   return (
@@ -47,8 +54,8 @@ function Feed() {
       {/* displayName, userName, verified, text, image, avatar, */}
 
       <Post
-        displayName="Divesh"
-        userName="IronManFan"
+        displayName="Iron Man"
+        userName="TonyStark"
         verified
         text="This is our first Tweet"
         image="https://media.giphy.com/media/3o7bu9QJvnFxxFXaes/giphy.gif"
@@ -56,8 +63,9 @@ function Feed() {
       />
 
       {/* populating posts */}
-      {posts.map(populatePosts)}
-
+      <FlipMove>
+        {posts.map(populatePosts)}
+      </FlipMove>
     </div>
   );
 }

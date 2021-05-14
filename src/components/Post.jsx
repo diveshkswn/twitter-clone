@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Avatar } from '@material-ui/core';
+import React, { forwardRef } from 'react';
 import {
   ChatBubbleOutlineRounded,
   FavoriteBorderOutlined,
@@ -7,17 +8,17 @@ import {
   Repeat,
   VerifiedUser,
 } from '@material-ui/icons';
-import React from 'react';
+
 import './Post.css';
 
-function Post(props) {
+const Post = forwardRef((props, ref) => {
   const {
     displayName, userName, verified, text, image, avatar,
   } = props;
 
   return (
 
-    <div className="post">
+    <div className="post" ref={ref}>
       <div className="post_avatar">
         <Avatar src={avatar} />
       </div>
@@ -36,10 +37,14 @@ function Post(props) {
             <p>{text}</p>
           </div>
         </div>
-        <img
-          src={image}
-          alt="gif"
-        />
+        {/* image conditional rendering */}
+        {image ? (
+          <img
+            src={image}
+            alt="gif"
+          />
+        ) : <div />}
+
         <div className="post__footer">
           <ChatBubbleOutlineRounded fontSize="small" />
           <Repeat fontSize="small" />
@@ -49,6 +54,6 @@ function Post(props) {
       </div>
     </div>
   );
-}
+});
 
 export default Post;
